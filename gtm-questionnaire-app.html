@@ -1,0 +1,1070 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gcore Product GTM Questionnaire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f3f2;
+      --bg-warm: #f0ece8;
+      --card: #ffffff;
+      --ink: #150c18;
+      --muted: #5b545f;
+      --quiet: #9a939f;
+      --line: #e8e3df;
+      --soft: #fff1eb;
+      --soft-strong: #ffe3d4;
+      --brand: #ff4c00;
+      --brand-dark: #e64300;
+      --success: #047857;
+      --shadow: 0 16px 32px -16px rgba(21, 12, 24, 0.10), 0 2px 6px -2px rgba(21, 12, 24, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(255, 76, 0, 0.12), transparent 34rem),
+        radial-gradient(circle at 90% 18%, rgba(255, 227, 212, 0.7), transparent 28rem),
+        linear-gradient(180deg, #fbfaf9 0%, var(--bg) 42%, var(--bg-warm) 100%);
+      color: var(--ink);
+      font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .app {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 34px 32px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
+      gap: 24px;
+      align-items: stretch;
+      margin-bottom: 24px;
+    }
+
+    .hero__main,
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero__main {
+      padding: 48px;
+      background:
+        radial-gradient(circle at top left, rgba(255, 76, 0, 0.16), transparent 32%),
+        linear-gradient(135deg, #ffffff, #fff8f3);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      margin: 0 0 24px;
+      padding: 6px 14px;
+      border: 1px solid var(--soft-strong);
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--brand);
+      font-size: 12.5px;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(38px, 5vw, 56px);
+      font-weight: 700;
+      line-height: 1.06;
+      letter-spacing: -1.5px;
+    }
+
+    .hero__copy {
+      max-width: 760px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .hero__side {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      background: var(--ink);
+      color: #ffffff;
+    }
+
+    .stat {
+      display: grid;
+      gap: 4px;
+    }
+
+    .stat strong {
+      font-size: 128px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -1px;
+      color: var(--brand);
+    }
+
+    .stat span {
+      color: #ffffff;
+      font-size: 26px;
+      font-weight: 800;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 11px 22px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #ffffff;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 150ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      border-color: var(--soft-strong);
+      box-shadow: 0 8px 16px -8px rgba(21, 12, 24, 0.10);
+    }
+
+    .btn--primary {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: #ffffff;
+      box-shadow: 0 2px 0 rgba(255, 76, 0, 0.15), 0 8px 20px rgba(255, 76, 0, 0.25);
+    }
+
+    .btn--primary:hover {
+      background: var(--brand-dark);
+      border-color: var(--brand-dark);
+    }
+
+    .btn--danger {
+      color: #991b1b;
+      border-color: #fecaca;
+      background: #fff1f2;
+      box-shadow: none;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 24px;
+      padding: 18px;
+    }
+
+    .progress {
+      height: 10px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      margin: 12px 0 16px;
+    }
+
+    .progress__bar {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--brand), #fb923c);
+      transition: width 180ms ease;
+    }
+
+    .progressText {
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .nav {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .nav button {
+      display: grid;
+      grid-template-columns: 26px minmax(0, 1fr);
+      gap: 10px;
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid transparent;
+      border-radius: 14px;
+      background: transparent;
+      color: var(--muted);
+      text-align: left;
+    }
+
+    .nav button:hover,
+    .nav button.is-active {
+      background: var(--soft);
+      border-color: var(--soft-strong);
+      color: var(--ink);
+    }
+
+    .nav__number {
+      display: grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: #f2efec;
+      color: var(--quiet);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .nav button.is-active .nav__number {
+      background: var(--brand);
+      color: #ffffff;
+    }
+
+    .nav__label {
+      font-weight: 500;
+      font-size: 13px;
+    }
+
+    .content {
+      display: grid;
+      gap: 44px;
+    }
+
+    #gtmForm {
+      display: grid;
+      gap: 5px;
+    }
+
+    .section {
+      padding: 34px;
+      scroll-margin-top: 24px;
+    }
+
+    .section + .section {
+      margin-top: 20px;
+    }
+
+    .section__top {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .section h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.8px;
+    }
+
+    .section p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--soft);
+      border: 1px solid var(--soft-strong);
+      color: var(--brand);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    .field {
+      display: grid;
+      gap: 10px;
+      padding: 22px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    label {
+      color: var(--ink);
+      font-size: 14.5px;
+      font-weight: 600;
+      letter-spacing: -0.1px;
+    }
+
+    .hint {
+      margin: -2px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #ffffff;
+      color: var(--ink);
+      padding: 13px 14px;
+      outline: none;
+      transition: border-color 140ms ease, box-shadow 140ms ease, background 140ms ease;
+    }
+
+    textarea {
+      min-height: 116px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--brand);
+      box-shadow: 0 0 0 4px rgba(255, 76, 0, 0.12);
+      background: #fffdfa;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .footerPanel {
+      padding: 28px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .footerPanel p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .saved {
+      padding: 28px;
+    }
+
+    .saved__top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 180px;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .saved__top .btn {
+      width: 100%;
+      white-space: nowrap;
+    }
+
+    .saved__top h2 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.6px;
+    }
+
+    .savedList {
+      display: grid;
+      gap: 10px;
+    }
+
+    .savedItem {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fbfaf9;
+    }
+
+    .savedItem strong {
+      display: block;
+      font-weight: 600;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .savedItem span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .savedItem__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .toast {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 20;
+      max-width: 360px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: #052e16;
+      color: #ffffff;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: 180ms ease;
+      font-weight: 600;
+    }
+
+    .toast.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .layout,
+      .footerPanel {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      .app {
+        padding: 16px;
+      }
+
+      .hero__main,
+      .section,
+      .saved,
+      .footerPanel {
+        padding: 20px;
+        border-radius: 18px;
+      }
+
+      .split,
+      .nav {
+        grid-template-columns: 1fr;
+      }
+
+      .section__top,
+      .saved__top,
+      .savedItem {
+        grid-template-columns: 1fr;
+        display: grid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero__main">
+        <p class="eyebrow">Gcore GTM Intake</p>
+        <h1 id="page-title">Turn product answers into a stronger GTM doc.</h1>
+        <p class="hero__copy">Use this questionnaire with product managers before writing a new product GTM. It keeps the answers direct, stores drafts locally, and exports the final intake as Markdown.</p>
+        <div class="actions">
+          <button class="btn btn--primary" type="button" data-action="save">Save response</button>
+          <button class="btn" type="button" data-action="markdown">Export Markdown</button>
+          <button class="btn" type="button" data-action="clearDraft">Clear draft</button>
+        </div>
+      </div>
+      <aside class="hero__side panel" aria-label="Questionnaire status">
+        <div class="stat">
+          <strong id="questionCount">0</strong>
+          <span>direct questions across the GTM intake</span>
+        </div>
+        <div>
+          <div class="progress" aria-hidden="true">
+            <div class="progress__bar" id="progressBar"></div>
+          </div>
+          <div class="progressText" id="progressText">0% complete</div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="layout">
+      <aside class="sidebar panel">
+        <div class="badge">Sections</div>
+        <nav class="nav" id="sectionNav" aria-label="Questionnaire sections"></nav>
+      </aside>
+
+      <div class="content">
+        <form id="gtmForm" autocomplete="off"></form>
+
+        <section class="footerPanel panel">
+          <div>
+            <strong>Ready to collect this intake?</strong>
+            <p>Save it to the browser, then export it as Markdown for a GTM doc.</p>
+          </div>
+          <div class="actions">
+            <button class="btn btn--primary" type="button" data-action="save">Save response</button>
+            <button class="btn" type="button" data-action="markdown">Export Markdown</button>
+          </div>
+        </section>
+
+        <section class="saved panel" aria-labelledby="saved-title">
+          <div class="saved__top">
+            <div>
+              <h2 id="saved-title">Saved responses</h2>
+              <p>Stored locally in this browser. Export anything important before clearing browser data.</p>
+            </div>
+            <button class="btn btn--danger" type="button" data-action="clearSaved">Clear saved</button>
+          </div>
+          <div class="savedList" id="savedList"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const STORAGE_DRAFT = "gcore-gtm-questionnaire-draft";
+    const STORAGE_SAVED = "gcore-gtm-questionnaire-saved";
+
+    const sections = [
+      {
+        title: "Product Basics",
+        intro: "Define the product and who owns the final truth.",
+        fields: [
+          ["productName", "What is the product name?", "text", "Use the current working or public product name."],
+          ["productOneLine", "In one sentence, what does this product do?", "textarea", "Keep this factual and simple."],
+          ["productStage", "Is the product live, in beta, in private preview, or still in development?", "select", "", ["Live", "Beta", "Private preview", "In development", "Other"]],
+          ["claimOwner", "Who is the product owner and who approves final public claims?", "textarea", "Name the product owner and final claim approver."]
+        ]
+      },
+      {
+        title: "Ideal Customer And Problem",
+        intro: "Find who we should target and what the product solves for them.",
+        fields: [
+          ["idealCustomer", "Who is the ideal customer for this product?", "textarea", "Be specific: company type, size, industry, team, and role."],
+          ["customerProblem", "What problem does this product solve for that customer?", "textarea", "Name the pain, risk, friction, or missed opportunity."],
+          ["customerCanDo", "What can the customer do after using this product that they could not do easily before?", "textarea", "Describe the practical customer outcome."],
+          ["strongestUseCase", "What is the strongest real-world use case for this product?", "textarea", "Use a real example if one exists."]
+        ]
+      },
+      {
+        title: "Audience And Segment Priority",
+        intro: "Separate self-serve, B2B, enterprise, and vertical priorities.",
+        fields: [
+          ["serveModel", "Is this product mainly for self-serve users, B2B/enterprise customers, or both?", "select", "", ["Self-serve", "B2B / enterprise", "Both", "Not sure"]],
+          ["prioritySegment", "Which segment should marketing prioritize first and why?", "textarea", "Explain the business reason, not only the audience label."],
+          ["companySize", "What company size is the best fit?", "textarea", "Examples: individual developers, small teams, mid-market, enterprise, or another segment."],
+          ["sizePainpoints", "Do different customer sizes have different pain points?", "textarea", "If yes, explain the main pain point for each size."],
+          ["targetMarkets", "Which industries, verticals, or regions should marketing target first?", "textarea", "List the highest-fit targets first."],
+          ["avoidCustomers", "Which customer types should we avoid targeting because the product is not a good fit?", "textarea", "Include any bad-fit use cases or segments."]
+        ]
+      },
+      {
+        title: "Positioning",
+        intro: "Clarify what the product is, what it is not, and why it matters.",
+        fields: [
+          ["simpleDescription", "How would you describe this product in simple customer language?", "textarea", "Avoid internal terms unless the customer would use them."],
+          ["solvesImproves", "What does this product solve, improve, reduce, or make easier for the customer?", "textarea", "Focus on customer consequences."],
+          ["similarProducts", "What products or solutions on the market look similar?", "textarea", "Name categories, competitors, or common alternatives."],
+          ["notThis", "What might customers think this product is, but it is not?", "textarea", "This helps prevent wrong positioning."],
+          ["standout", "How does this product stand out from alternatives? If it does not clearly stand out, say so.", "textarea", "Be honest about the real differentiation."],
+          ["platformConnection", "Does this product connect with other Gcore products to create a bigger value story?", "textarea", "Name the products and the combined benefit."]
+        ]
+      },
+      {
+        title: "Product Capabilities",
+        intro: "Capture what exists today and what marketing must handle carefully.",
+        fields: [
+          ["coreFeatures", "What are the core features available today?", "textarea", "List only shipped or launch-approved features."],
+          ["storyFeatures", "Which 3 features matter most for the customer story?", "textarea", "Pick the features that best support the value proposition."],
+          ["setupOwnership", "Which features are self-serve, and which require sales, support, or manual setup?", "textarea", "Separate them clearly."],
+          ["planFeatures", "Which features are only available on specific plans or enterprise deals?", "textarea", "Include plan names if known."],
+          ["integrations", "What integrations, APIs, SDKs, Terraform, CLI, or automation options exist today?", "textarea", "Do not include roadmap-only items."],
+          ["constraints", "What limits, quotas, or technical constraints must marketing understand?", "textarea", "Include anything that could make a claim misleading."]
+        ]
+      },
+      {
+        title: "Activation And Setup",
+        intro: "Make setup promises accurate and useful.",
+        fields: [
+          ["setupFlow", "What is the exact setup flow from first click to first successful use?", "textarea", "Write it as steps."],
+          ["setupNeeds", "What does the customer need before they can start?", "textarea", "Examples: account, domain access, origin URL, payment method, support approval."],
+          ["setupTime", "How long does setup usually take for a typical customer?", "textarea", "Use a realistic range and mention assumptions."],
+          ["setupHelp", "Does setup require technical knowledge, support, or sales help?", "textarea", "Be clear about where help is required."],
+          ["firstSuccess", "What is the first success event inside the product?", "textarea", "Example: first request served, first stream live, first protected endpoint active."],
+          ["setupNeverPromise", "What should marketing never promise about setup speed or simplicity?", "textarea", "List risky or inaccurate promises."]
+        ]
+      },
+      {
+        title: "Pricing And Packaging",
+        intro: "Collect pricing truth and commercial hooks.",
+        fields: [
+          ["pricingPlans", "What pricing plans or packages exist today?", "textarea", "Include plan names and status."],
+          ["planIncludes", "What is included in each plan?", "textarea", "Add limits or included usage where relevant."],
+          ["freeOffer", "Is there a free plan, free trial, beta period, included allowance, or special launch offer?", "textarea", "State if payment details are required."],
+          ["billingUsage", "What usage is billed, and what usage is free or included?", "textarea", "Include overage logic if it exists."],
+          ["unfinishedPricing", "What pricing details are still not final?", "textarea", "Flag anything marketing should not publish yet."],
+          ["pricingHooks", "Are there special pricing hooks marketing should know about?", "textarea", "Examples: free transcoding, included operations, clean-traffic billing, no credit card, waived setup."]
+        ]
+      },
+      {
+        title: "Proof, Claims, And Must-Say Points",
+        intro: "Protect accuracy while surfacing the strongest claims.",
+        fields: [
+          ["mustSay", "What are the most important things marketing must say about this product?", "textarea", "List the points that should not be missed."],
+          ["showcaseNumbers", "Are there any numbers, metrics, performance results, capacity claims, or proof points we should showcase?", "textarea", "Include only numbers we can verify or approve."],
+          ["specialDifferentiators", "Are there any special features, offers, or differentiators we should not miss?", "textarea", "Include anything that is commercially important."],
+          ["provedOutcomes", "What customer outcomes can we prove today?", "textarea", "Use evidence, not assumptions."],
+          ["approvedClaims", "What claims are approved for public use?", "textarea", "Separate safe claims from claims that need review."],
+          ["approvalNeeded", "What claims need product, legal, security, or leadership approval before use?", "textarea", "Name the approver if known."],
+          ["overpromise", "What would be an overpromise?", "textarea", "List claims marketing should avoid."],
+          ["uncomfortableWording", "What wording would make product, legal, or security uncomfortable?", "textarea", "Include exact risky phrases if possible."]
+        ]
+      },
+      {
+        title: "Customer Stories And Revenue Potential",
+        intro: "Find proof, future case studies, and the highest-value use cases.",
+        fields: [
+          ["publicCaseStudies", "Do we have any public case studies for this product?", "textarea", "Link or name them if yes."],
+          ["internalStories", "Do we have any internal customer stories, sales examples, or customer quotes we can use as inspiration?", "textarea", "Mark what is internal only."],
+          ["idealCaseStudy", "If we do not have a case study yet, who would be the ideal case study partner and why?", "textarea", "Name a customer type or specific account if allowed."],
+          ["revenuePotential", "Which use case has the biggest revenue potential?", "textarea", "Explain why it is commercially important."],
+          ["easyUseCase", "Which use case is easiest for customers to understand?", "textarea", "This may become the top-of-funnel story."],
+          ["strongestProof", "Which use case has the strongest proof today?", "textarea", "Name the proof, even if it is internal."]
+        ]
+      },
+      {
+        title: "Competitive Context",
+        intro: "Define the safe competitive story without over-attacking competitors.",
+        fields: [
+          ["competitors", "Which competitors or alternatives will customers compare this product against?", "textarea", "Include direct competitors and do-it-yourself alternatives."],
+          ["competitorsDoWell", "What do those competitors do well?", "textarea", "This keeps the comparison honest."],
+          ["gcoreAdvantage", "Where does Gcore have a real advantage?", "textarea", "Use customer value, not internal preference."],
+          ["competitorStrength", "Where are competitors stronger than us?", "textarea", "Be direct so marketing does not overclaim."],
+          ["competitiveAngle", "What is the safest and strongest competitive angle for marketing?", "textarea", "Frame the tradeoff we solve better."],
+          ["avoidCompetitorClaims", "What should marketing avoid saying about competitors?", "textarea", "List risky claims or claims needing fact-checking."]
+        ]
+      },
+      {
+        title: "Product Boundaries And Risks",
+        intro: "Make the GTM useful without making promises the product cannot keep.",
+        fields: [
+          ["notProduct", "What is this product not?", "textarea", "Use plain language."],
+          ["doNotSell", "What use cases should we not sell this product for?", "textarea", "List bad-fit use cases."],
+          ["notAvailable", "What features are not available today, even if customers may expect them?", "textarea", "Separate current gaps from roadmap."],
+          ["roadmapPrivate", "What roadmap features should marketing not mention publicly?", "textarea", "Include sensitive or uncertain items."],
+          ["supportScope", "What support does Gcore provide, and what support does Gcore not provide?", "textarea", "This prevents false expectations."],
+          ["misunderstoodBehavior", "What product behavior is easy to misunderstand?", "textarea", "Include edge cases, setup caveats, or billing confusion."]
+        ]
+      },
+      {
+        title: "Upsell, Cross-Sell, And Bigger Story",
+        intro: "Connect the product to adoption paths and the wider Gcore platform.",
+        fields: [
+          ["upsellPath", "What is the best upsell or cross-sell path for this product?", "textarea", "Name the next likely product or package."],
+          ["beforeProduct", "Which Gcore product should customers usually adopt before this one, if any?", "textarea", "State if there is no dependency."],
+          ["afterProduct", "Which Gcore product should customers usually adopt after this one?", "textarea", "Explain the natural next step."],
+          ["biggerStory", "Does this product help tell a bigger Gcore platform story? If yes, what is that story?", "textarea", "Connect to speed, control, security, AI, video, edge, or another platform theme."],
+          ["lifecycleTrigger", "What customer milestone should trigger lifecycle emails or product recommendations?", "textarea", "Example: first request, protection enabled, first stream, setup incomplete."]
+        ]
+      },
+      {
+        title: "Launch And GTM Motion",
+        intro: "Turn the product truth into campaign action.",
+        fields: [
+          ["launchGoal", "What is the main launch goal?", "select", "", ["Awareness", "Signups", "Trials", "Sales calls", "Activation", "Revenue", "Retention", "Other"]],
+          ["firstAction", "What customer action should marketing drive first?", "textarea", "Pick one primary action."],
+          ["neededAssets", "What assets are needed?", "textarea", "Examples: landing page, email sequence, blog, demo video, sales deck, docs, comparison page, case study."],
+          ["channels", "What channels should marketing prioritize first?", "textarea", "Include paid, lifecycle, outbound, events, community, or partner channels."],
+          ["success30", "What does success look like after 30 days?", "textarea", "Use measurable signals if possible."],
+          ["success90", "What does success look like after 90 days?", "textarea", "Use measurable signals if possible."]
+        ]
+      },
+      {
+        title: "CTA And Offer",
+        intro: "Make the next step match the buying context.",
+        fields: [
+          ["mainCta", "What is the main CTA for this product?", "text", "Use the exact preferred wording if known."],
+          ["ctaDestination", "Should the CTA drive self-serve signup, setup, free trial, demo, sales call, architecture review, or support contact?", "textarea", "Choose the action that matches the customer segment."],
+          ["ctaReassurance", "What reassurance should appear near the CTA?", "textarea", "Examples: no credit card, setup in minutes, support included, response within one business day."],
+          ["avoidCta", "What CTA wording should we avoid?", "textarea", "List vague, inaccurate, or too-small offers."]
+        ]
+      },
+      {
+        title: "Source Links And Existing Assets",
+        intro: "Put every useful source in one place at the end.",
+        fields: [
+          ["websiteLink", "Link the current website page for this product, if one exists.", "url", ""],
+          ["docsLink", "Link the current product docs.", "url", ""],
+          ["pricingLink", "Link the pricing page or pricing documentation.", "url", ""],
+          ["wikiLink", "Link the product wiki, Confluence page, or internal spec.", "url", ""],
+          ["figmaLinks", "Link any Figma files, UI mockups, screenshots, or demo videos.", "textarea", "One link per line is fine."],
+          ["caseStudyLinks", "Link any public case studies related to this product.", "textarea", "One link per line is fine."],
+          ["internalStoryLinks", "Link any internal customer stories, sales notes, or approved customer examples.", "textarea", "Mark internal-only links clearly."],
+          ["competitiveLinks", "Link any competitive research, battlecards, or sales enablement material.", "textarea", "One link per line is fine."],
+          ["supportLinks", "Link any support playbooks or troubleshooting guides.", "textarea", "One link per line is fine."],
+          ["roadmapLinks", "Link any roadmap, Jira epic, or launch plan marketing should know about.", "textarea", "One link per line is fine."]
+        ]
+      }
+    ];
+
+    const form = document.querySelector("#gtmForm");
+    const nav = document.querySelector("#sectionNav");
+    const savedList = document.querySelector("#savedList");
+    const progressBar = document.querySelector("#progressBar");
+    const progressText = document.querySelector("#progressText");
+    const questionCount = document.querySelector("#questionCount");
+    const toast = document.querySelector("#toast");
+
+    function fieldId(sectionIndex, key) {
+      return `section${sectionIndex}-${key}`;
+    }
+
+    function renderForm() {
+      const totalFields = sections.reduce((sum, section) => sum + section.fields.length, 0);
+      questionCount.textContent = totalFields;
+
+      sections.forEach((section, sectionIndex) => {
+        const sectionId = `section-${sectionIndex}`;
+
+        const navButton = document.createElement("button");
+        navButton.type = "button";
+        navButton.innerHTML = `<span class="nav__number">${sectionIndex + 1}</span><span class="nav__label">${section.title}</span>`;
+        navButton.addEventListener("click", () => document.getElementById(sectionId).scrollIntoView({ behavior: "smooth", block: "start" }));
+        nav.appendChild(navButton);
+
+        const panel = document.createElement("section");
+        panel.className = "section panel";
+        panel.id = sectionId;
+        panel.innerHTML = `
+          <div class="section__top">
+            <div>
+              <h2>${section.title}</h2>
+              <p>${section.intro}</p>
+            </div>
+            <span class="badge">${section.fields.length} questions</span>
+          </div>
+        `;
+
+        section.fields.forEach((field) => {
+          const [key, label, type, hint, options] = field;
+          const id = fieldId(sectionIndex, key);
+          const wrapper = document.createElement("div");
+          wrapper.className = "field";
+
+          let inputMarkup = "";
+          if (type === "textarea") {
+            inputMarkup = `<textarea id="${id}" name="${key}" data-label="${escapeHtml(label)}"></textarea>`;
+          } else if (type === "select") {
+            const optionMarkup = [`<option value="">Select one</option>`].concat(options.map((option) => `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`)).join("");
+            inputMarkup = `<select id="${id}" name="${key}" data-label="${escapeHtml(label)}">${optionMarkup}</select>`;
+          } else {
+            inputMarkup = `<input id="${id}" name="${key}" data-label="${escapeHtml(label)}" type="${type}">`;
+          }
+
+          wrapper.innerHTML = `
+            <label for="${id}">${label}</label>
+            ${hint ? `<p class="hint">${hint}</p>` : ""}
+            ${inputMarkup}
+          `;
+          panel.appendChild(wrapper);
+        });
+
+        form.appendChild(panel);
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;");
+    }
+
+    function getFormData() {
+      const data = {};
+      const fields = form.querySelectorAll("input, textarea, select");
+      fields.forEach((field) => {
+        data[field.name] = field.value.trim();
+      });
+      return data;
+    }
+
+    function setFormData(data) {
+      const fields = form.querySelectorAll("input, textarea, select");
+      fields.forEach((field) => {
+        field.value = data[field.name] || "";
+      });
+      updateProgress();
+    }
+
+    function getSavedResponses() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_SAVED)) || [];
+      } catch (error) {
+        return [];
+      }
+    }
+
+    function saveDraft() {
+      localStorage.setItem(STORAGE_DRAFT, JSON.stringify(getFormData()));
+    }
+
+    function loadDraft() {
+      try {
+        const draft = JSON.parse(localStorage.getItem(STORAGE_DRAFT));
+        if (draft) setFormData(draft);
+      } catch (error) {
+        localStorage.removeItem(STORAGE_DRAFT);
+      }
+    }
+
+    function saveResponse() {
+      const data = getFormData();
+      const productName = data.productName || "Untitled product";
+      const id = window.crypto && window.crypto.randomUUID ? window.crypto.randomUUID() : String(Date.now());
+      const response = {
+        id,
+        productName,
+        createdAt: new Date().toISOString(),
+        data
+      };
+      const saved = getSavedResponses();
+      saved.unshift(response);
+      localStorage.setItem(STORAGE_SAVED, JSON.stringify(saved));
+      renderSavedResponses();
+      showToast(`Saved response for ${productName}.`);
+    }
+
+    function renderSavedResponses() {
+      const saved = getSavedResponses();
+      savedList.innerHTML = "";
+
+      if (!saved.length) {
+        savedList.innerHTML = `<p class="hint">No saved responses yet.</p>`;
+        return;
+      }
+
+      saved.forEach((response) => {
+        const item = document.createElement("div");
+        item.className = "savedItem";
+        const date = new Date(response.createdAt).toLocaleString();
+        item.innerHTML = `
+          <div>
+            <strong>${escapeHtml(response.productName)}</strong>
+            <span>Saved ${escapeHtml(date)}</span>
+          </div>
+          <div class="savedItem__actions">
+            <button class="btn" type="button" data-load="${response.id}">Load</button>
+            <button class="btn" type="button" data-export-md="${response.id}">Markdown</button>
+            <button class="btn btn--danger" type="button" data-delete="${response.id}">Delete</button>
+          </div>
+        `;
+        savedList.appendChild(item);
+      });
+    }
+
+    function updateProgress() {
+      const fields = Array.from(form.querySelectorAll("input, textarea, select"));
+      const completed = fields.filter((field) => field.value.trim()).length;
+      const percent = fields.length ? Math.round((completed / fields.length) * 100) : 0;
+      progressBar.style.width = `${percent}%`;
+      progressText.textContent = `${percent}% complete (${completed}/${fields.length} answered)`;
+    }
+
+    function makeMarkdown(data) {
+      const title = data.productName || "Untitled product";
+      let markdown = `# Product GTM Intake: ${title}\n\n`;
+      markdown += `Generated: ${new Date().toLocaleString()}\n\n`;
+
+      sections.forEach((section) => {
+        markdown += `## ${section.title}\n\n`;
+        section.fields.forEach(([key, label]) => {
+          const answer = data[key] || "";
+          markdown += `### ${label}\n\n${answer || "_No answer provided._"}\n\n`;
+        });
+      });
+
+      return markdown;
+    }
+
+    function downloadFile(filename, contents, type) {
+      const blob = new Blob([contents], { type });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function slugify(value) {
+      return (value || "product")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-|-$/g, "") || "product";
+    }
+
+    function exportMarkdown(data = getFormData()) {
+      const filename = `${slugify(data.productName)}-gtm-intake.md`;
+      downloadFile(filename, makeMarkdown(data), "text/markdown");
+      showToast("Markdown exported.");
+    }
+
+    function clearDraft() {
+      if (!confirm("Clear the current draft? Saved responses will stay untouched.")) return;
+      localStorage.removeItem(STORAGE_DRAFT);
+      form.reset();
+      updateProgress();
+      showToast("Draft cleared.");
+    }
+
+    function clearSaved() {
+      if (!confirm("Delete all saved responses from this browser?")) return;
+      localStorage.removeItem(STORAGE_SAVED);
+      renderSavedResponses();
+      showToast("Saved responses cleared.");
+    }
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("is-visible");
+      window.clearTimeout(showToast.timer);
+      showToast.timer = window.setTimeout(() => toast.classList.remove("is-visible"), 2600);
+    }
+
+    function observeSections() {
+      const navButtons = Array.from(nav.querySelectorAll("button"));
+      const sectionPanels = sections.map((_, index) => document.getElementById(`section-${index}`));
+
+      const observer = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (!visible) return;
+        const index = sectionPanels.indexOf(visible.target);
+        navButtons.forEach((button, buttonIndex) => button.classList.toggle("is-active", buttonIndex === index));
+      }, { threshold: [0.2, 0.45, 0.7] });
+
+      sectionPanels.forEach((panel) => observer.observe(panel));
+      if (navButtons[0]) navButtons[0].classList.add("is-active");
+    }
+
+    document.addEventListener("click", (event) => {
+      const actionButton = event.target.closest("[data-action]");
+      if (actionButton) {
+        const action = actionButton.dataset.action;
+        if (action === "save") saveResponse();
+        if (action === "markdown") exportMarkdown();
+        if (action === "clearDraft") clearDraft();
+        if (action === "clearSaved") clearSaved();
+        return;
+      }
+
+      const loadButton = event.target.closest("[data-load]");
+      if (loadButton) {
+        const response = getSavedResponses().find((item) => item.id === loadButton.dataset.load);
+        if (response) {
+          setFormData(response.data);
+          saveDraft();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          showToast(`Loaded ${response.productName}.`);
+        }
+        return;
+      }
+
+      const mdButton = event.target.closest("[data-export-md]");
+      if (mdButton) {
+        const response = getSavedResponses().find((item) => item.id === mdButton.dataset.exportMd);
+        if (response) exportMarkdown(response.data);
+        return;
+      }
+
+      const deleteButton = event.target.closest("[data-delete]");
+      if (deleteButton) {
+        const saved = getSavedResponses().filter((item) => item.id !== deleteButton.dataset.delete);
+        localStorage.setItem(STORAGE_SAVED, JSON.stringify(saved));
+        renderSavedResponses();
+        showToast("Saved response deleted.");
+      }
+    });
+
+    form.addEventListener("input", () => {
+      saveDraft();
+      updateProgress();
+    });
+
+    renderForm();
+    loadDraft();
+    renderSavedResponses();
+    updateProgress();
+    observeSections();
+  </script>
+</body>
+</html>
